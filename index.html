@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitcoin Mining Hub | Mine BTC Without Hardware – GoMining</title>
-  <meta name="description" content="Educational overview of digital Bitcoin mining with GoMining. Live BTC price & Fear & Greed Index. Referral code awW0t." />
-  <meta name="theme-color" content="#0d0d0d" />
+  <meta name="description" content="Educational overview of digital Bitcoin mining with GoMining. Live BTC price & Fear & Greed Index. Real facility video. Referral code awW0t." />
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0a0a0a;
-      --card: #121212;
-      --card-hover: #171717;
-      --border: rgba(255,255,255,0.07);
-      --text: #e8e8e8;
+      --bg: #080808;
+      --card: #111111;
+      --card-hover: #161616;
+      --border: rgba(255,255,255,0.08);
+      --text: #f0f0f0;
       --muted: #8a8a8a;
       --orange: #f7931a;
       --green: #22c55e;
@@ -36,8 +36,8 @@
     /* Header */
     header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(10,10,10,0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(8,8,8,0.9);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       padding: 14px 24px;
       display: flex; align-items: center; justify-content: space-between;
@@ -68,92 +68,106 @@
       box-shadow: 0 6px 18px rgba(247,147,26,0.3);
     }
 
-    /* Hero */
+    /* Hero – closer to Wix dark mining look */
     .hero {
       position: relative;
-      min-height: 72vh;
+      min-height: 85vh;
       display: flex; align-items: center;
-      padding: 56px 24px 72px;
+      padding: 80px 24px 90px;
       overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
       background: 
-        radial-gradient(ellipse 70% 50% at 75% 35%, rgba(247,147,26,0.09) 0%, transparent 55%),
-        linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+        radial-gradient(ellipse 90% 70% at 80% 40%, rgba(247,147,26,0.13) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 10% 80%, rgba(247,147,26,0.05) 0%, transparent 50%),
+        linear-gradient(180deg, #050505 0%, #0c0c0c 40%, #111 100%);
       z-index: 0;
     }
-    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    /* subtle grid / rack feel */
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 70% at 70% 50%, black 20%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
     .hero-badge {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--orange);
-      background: rgba(247,147,26,0.1);
-      border: 1px solid rgba(247,147,26,0.25);
-      padding: 5px 12px;
+      background: rgba(247,147,26,0.12);
+      border: 1px solid rgba(247,147,26,0.28);
+      padding: 6px 14px;
       border-radius: 20px;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
     .hero h1 {
-      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-size: clamp(2.8rem, 7vw, 4.6rem);
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 18px;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
+      color: #fff;
     }
     .hero h1 span { color: var(--orange); }
     .hero p {
-      font-size: 1.15rem;
-      color: #b0b0b0;
-      max-width: 520px;
-      margin-bottom: 28px;
+      font-size: 1.2rem;
+      color: #b8b8b8;
+      max-width: 540px;
+      margin-bottom: 34px;
+      line-height: 1.55;
     }
-    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
     .btn-primary {
       background: var(--orange);
       color: #111;
       font-weight: 700;
-      padding: 14px 24px;
-      border-radius: 9px;
-      font-size: 1rem;
+      padding: 16px 28px;
+      border-radius: 10px;
+      font-size: 1.05rem;
       text-decoration: none !important;
       display: inline-flex; align-items: center; gap: 8px;
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(247,147,26,0.35);
+      box-shadow: 0 10px 28px rgba(247,147,26,0.4);
     }
     .btn-secondary {
       background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
+      color: #eee;
+      border: 1px solid rgba(255,255,255,0.15);
       font-weight: 600;
-      padding: 14px 22px;
-      border-radius: 9px;
-      font-size: 0.95rem;
+      padding: 16px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
       text-decoration: none !important;
     }
-    .btn-secondary:hover { border-color: #444; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.3); }
 
     /* Sections */
-    .section { padding: 64px 24px; max-width: 1060px; margin: 0 auto; }
+    .section { padding: 72px 24px; max-width: 1060px; margin: 0 auto; }
     .section-title {
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
     .section-sub {
       color: var(--muted);
-      margin-bottom: 32px;
-      font-size: 1.02rem;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
     }
 
-    /* ===== LIVE DASHBOARD (improved) ===== */
+    /* Live dashboard */
     .live-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -162,7 +176,6 @@
     @media (max-width: 700px) {
       .live-grid { grid-template-columns: 1fr; }
     }
-
     .live-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -170,19 +183,15 @@
       padding: 26px 24px 22px;
       position: relative;
       overflow: hidden;
-      transition: border-color 0.2s;
     }
-    .live-card:hover { border-color: rgba(255,255,255,0.12); }
-
     .live-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
       background: linear-gradient(90deg, transparent, var(--orange), transparent);
-      opacity: 0.7;
+      opacity: 0.75;
     }
-
     .live-card-header {
       display: flex;
       align-items: center;
@@ -203,7 +212,6 @@
       padding: 3px 8px;
       border-radius: 6px;
     }
-
     .live-value {
       font-size: 2.5rem;
       font-weight: 800;
@@ -211,22 +219,13 @@
       line-height: 1.1;
       margin-bottom: 6px;
     }
-    .live-meta {
-      font-size: 0.95rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* F&G visual bar */
+    .live-meta { font-size: 0.95rem; font-weight: 500; }
     .fng-bar-wrap {
       margin-top: 18px;
       height: 8px;
       background: #1e1e1e;
       border-radius: 4px;
       overflow: hidden;
-      position: relative;
     }
     .fng-bar {
       height: 100%;
@@ -241,7 +240,6 @@
       color: #555;
       margin-top: 6px;
     }
-
     .live-footer {
       margin-top: 20px;
       display: flex;
@@ -265,6 +263,30 @@
       50% { opacity: 0.4; }
     }
 
+    /* Video section */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #000;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .video-caption {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+
     /* Cards */
     .cards {
       display: grid;
@@ -279,22 +301,18 @@
       transition: border-color 0.2s, background 0.2s;
     }
     .card:hover {
-      border-color: rgba(247,147,26,0.22);
+      border-color: rgba(247,147,26,0.25);
       background: var(--card-hover);
     }
     .card-icon {
       width: 42px; height: 42px;
-      background: rgba(247,147,26,0.1);
+      background: rgba(247,147,26,0.12);
       border-radius: 11px;
       display: grid; place-items: center;
       font-size: 1.3rem;
       margin-bottom: 14px;
     }
-    .card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
+    .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
     .card p { color: #a0a0a0; font-size: 0.95rem; }
 
     /* Steps */
@@ -329,16 +347,16 @@
 
     /* CTA */
     .cta-block {
-      background: linear-gradient(145deg, #16120c 0%, #1a140e 40%, #121212 100%);
-      border: 1px solid rgba(247,147,26,0.2);
+      background: linear-gradient(145deg, #16120c 0%, #1a140e 40%, #111 100%);
+      border: 1px solid rgba(247,147,26,0.22);
       border-radius: 20px;
-      padding: 44px 32px;
+      padding: 48px 32px;
       text-align: center;
     }
     .cta-block h2 {
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.7rem, 3.5vw, 2.3rem);
       font-weight: 800;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .cta-block p {
       color: #b0b0b0;
@@ -349,14 +367,14 @@
     .code-pill {
       display: inline-block;
       background: #1c1c1c;
-      border: 1px dashed rgba(247,147,26,0.5);
+      border: 1px dashed rgba(247,147,26,0.55);
       color: var(--orange);
       font-weight: 700;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       letter-spacing: 0.1em;
-      padding: 10px 20px;
+      padding: 11px 22px;
       border-radius: 10px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
     .disclaimer-note {
       margin-top: 18px;
@@ -397,10 +415,10 @@
       flex-wrap: wrap;
       gap: 16px 28px;
       justify-content: center;
-      padding: 20px 24px;
+      padding: 18px 24px;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      background: #0d0d0d;
+      background: #0c0c0c;
       font-size: 0.82rem;
       color: #777;
     }
@@ -412,7 +430,7 @@
 
     /* Footer */
     footer {
-      padding: 40px 24px 48px;
+      padding: 40px 24px 52px;
       text-align: center;
       color: #666;
       font-size: 0.88rem;
@@ -439,22 +457,21 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="hero-badge">Educational · Referral overview</div>
+      <div class="hero-badge">Real hashrate · No hardware required</div>
       <h1>Unlock <span>Bitcoin Mining</span><br>Without Hardware</h1>
-      <p>Digital miners give you exposure to real industrial hashrate without buying ASICs, paying electricity, or managing hardware. This page explains how it works and links to GoMining via referral code <strong>awW0t</strong>.</p>
+      <p>Earn Bitcoin through digital miners backed by industrial-scale hashrate. No ASICs to buy, no electricity bills, no maintenance — just rewards. Join with referral code <strong>awW0t</strong>.</p>
       <div class="hero-buttons">
         <a class="btn-primary" href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener">
-          Open GoMining with code awW0t
+          Claim Bonus with Code awW0t
         </a>
-        <a class="btn-secondary" href="#how-it-works">See how it works</a>
+        <a class="btn-secondary" href="#facility">Watch real mining</a>
       </div>
     </div>
   </section>
 
-  <!-- Trust strip -->
   <div class="trust-strip">
     <div class="trust-item">📊 Live market data from public APIs</div>
-    <div class="trust-item">🔗 Direct referral link (no intermediate redirects)</div>
+    <div class="trust-item">🏭 Real facility video below</div>
     <div class="trust-item">⚠️ Not financial advice · Crypto involves risk</div>
   </div>
 
@@ -464,7 +481,6 @@
     <p class="section-sub">Public data refreshed automatically. Useful context while learning about mining economics.</p>
 
     <div class="live-grid">
-      <!-- BTC Price Card -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Bitcoin Price</span>
@@ -474,7 +490,6 @@
         <div class="live-meta" id="btc-change">Loading price…</div>
       </div>
 
-      <!-- Fear & Greed Card -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Fear & Greed Index</span>
@@ -482,7 +497,6 @@
         </div>
         <div class="live-value" id="fng-value">—</div>
         <div class="live-meta" id="fng-label">Loading sentiment…</div>
-
         <div class="fng-bar-wrap">
           <div class="fng-bar" id="fng-bar"></div>
         </div>
@@ -500,6 +514,26 @@
     </div>
   </section>
 
+  <!-- Real Facility Video -->
+  <section class="section" id="facility">
+    <h2 class="section-title">See the real mining facilities</h2>
+    <p class="section-sub">Independent tour of a GoMining Texas data center by VoskCoin — real ASICs, real infrastructure, real scale.</p>
+
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/mPJrgF6LXLk?rel=0" 
+        title="GoMining Texas Mining Farm Tour – VoskCoin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <p class="video-caption">
+      Full facility tour · 21,000+ ASICs · Curtailment & grid support explained · 
+      <a href="https://www.youtube.com/watch?v=mPJrgF6LXLk" target="_blank" rel="noopener">Watch on YouTube</a>
+    </p>
+  </section>
+
   <!-- Education -->
   <section class="section">
     <h2 class="section-title">What is Digital Bitcoin Mining?</h2>
@@ -509,7 +543,7 @@
       <div class="card">
         <div class="card-icon">⚡</div>
         <h3>Real hashrate share</h3>
-        <p>Digital miners typically represent a claim on actual computing power running on professional ASICs. You receive a portion of the Bitcoin rewards generated by that hashrate.</p>
+        <p>Digital miners represent a claim on actual computing power running on professional ASICs. You receive a portion of the Bitcoin rewards generated by that hashrate.</p>
       </div>
       <div class="card">
         <div class="card-icon">🖥️</div>
@@ -615,19 +649,15 @@
 
       async function update() {
         try {
-          // BTC price
           const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
           const btc = await btcRes.json();
           const price = btc.bitcoin.usd;
           const change = btc.bitcoin.usd_24h_change;
 
           priceEl.textContent = '$' + price.toLocaleString('en-US', { maximumFractionDigits: 0 });
-
-          const changeText = (change >= 0 ? '+' : '') + change.toFixed(2) + '% (24h)';
-          changeEl.innerHTML = changeText;
+          changeEl.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '% (24h)';
           changeEl.style.color = change >= 0 ? 'var(--green)' : 'var(--red)';
 
-          // Fear & Greed
           const fngRes = await fetch('https://api.alternative.me/fng/?limit=1');
           const fng = await fngRes.json();
           const val = parseInt(fng.data[0].value, 10);
@@ -636,7 +666,6 @@
           fngVal.textContent = val;
           fngLab.textContent = label;
 
-          // Color + bar
           let color = 'var(--orange)';
           if (val <= 25) color = 'var(--red)';
           else if (val <= 45) color = '#f97316';
