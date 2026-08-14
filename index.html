@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitcoin Mining Hub | Mine BTC Without Hardware – GoMining</title>
-  <meta name="description" content="Unlock Bitcoin mining without expensive hardware. Join GoMining with referral code awW0t for bonus power and free VIP. Live BTC price & Fear & Greed Index." />
+  <meta name="description" content="Educational overview of digital Bitcoin mining with GoMining. Live BTC price & Fear & Greed Index. Referral code awW0t." />
   <meta name="theme-color" content="#0d0d0d" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,21 +12,22 @@
   <style>
     :root {
       --bg: #0a0a0a;
-      --card: #141414;
-      --border: rgba(255,255,255,0.08);
+      --card: #121212;
+      --card-hover: #171717;
+      --border: rgba(255,255,255,0.07);
       --text: #e8e8e8;
-      --muted: #888;
+      --muted: #8a8a8a;
       --orange: #f7931a;
-      --green: #00c853;
-      --red: #ff5252;
-      --accent: #f7931a;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #eab308;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--orange); text-decoration: none; }
@@ -35,180 +36,272 @@
     /* Header */
     header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(10,10,10,0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       padding: 14px 24px;
       display: flex; align-items: center; justify-content: space-between;
     }
     .logo {
       display: flex; align-items: center; gap: 10px;
-      font-weight: 700; font-size: 1.15rem;
+      font-weight: 700; font-size: 1.1rem;
     }
     .logo-icon {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       background: linear-gradient(135deg, #f7931a, #ffb347);
-      border-radius: 10px;
+      border-radius: 9px;
       display: grid; place-items: center;
-      font-weight: 800; color: #111; font-size: 18px;
+      font-weight: 800; color: #111; font-size: 16px;
     }
     .nav-cta {
       background: var(--orange);
       color: #111 !important;
       font-weight: 600;
-      padding: 10px 18px;
+      padding: 9px 16px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       text-decoration: none !important;
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(247,147,26,0.35);
+      box-shadow: 0 6px 18px rgba(247,147,26,0.3);
     }
 
     /* Hero */
     .hero {
       position: relative;
-      min-height: 78vh;
+      min-height: 72vh;
       display: flex; align-items: center;
-      padding: 60px 24px 80px;
+      padding: 56px 24px 72px;
       overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
       background: 
-        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(247,147,26,0.12) 0%, transparent 60%),
-        linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+        radial-gradient(ellipse 70% 50% at 75% 35%, rgba(247,147,26,0.09) 0%, transparent 55%),
+        linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
       z-index: 0;
     }
-    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: rgba(247,147,26,0.1);
+      border: 1px solid rgba(247,147,26,0.25);
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
     .hero h1 {
-      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
       font-weight: 800;
-      line-height: 1.08;
+      line-height: 1.1;
       letter-spacing: -0.03em;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .hero h1 span { color: var(--orange); }
     .hero p {
-      font-size: 1.2rem;
-      color: #bbb;
-      max-width: 540px;
-      margin-bottom: 32px;
+      font-size: 1.15rem;
+      color: #b0b0b0;
+      max-width: 520px;
+      margin-bottom: 28px;
     }
-    .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
     .btn-primary {
       background: var(--orange);
       color: #111;
       font-weight: 700;
-      padding: 16px 28px;
-      border-radius: 10px;
-      font-size: 1.05rem;
+      padding: 14px 24px;
+      border-radius: 9px;
+      font-size: 1rem;
       text-decoration: none !important;
       display: inline-flex; align-items: center; gap: 8px;
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(247,147,26,0.4);
+      box-shadow: 0 8px 24px rgba(247,147,26,0.35);
     }
     .btn-secondary {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
       font-weight: 600;
-      padding: 16px 24px;
-      border-radius: 10px;
-      font-size: 1rem;
+      padding: 14px 22px;
+      border-radius: 9px;
+      font-size: 0.95rem;
       text-decoration: none !important;
     }
-    .btn-secondary:hover { border-color: #555; }
+    .btn-secondary:hover { border-color: #444; }
 
-    /* Live Dashboard */
-    .section { padding: 70px 24px; max-width: 1100px; margin: 0 auto; }
+    /* Sections */
+    .section { padding: 64px 24px; max-width: 1060px; margin: 0 auto; }
     .section-title {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       letter-spacing: -0.02em;
     }
     .section-sub {
       color: var(--muted);
-      margin-bottom: 36px;
-      font-size: 1.05rem;
+      margin-bottom: 32px;
+      font-size: 1.02rem;
     }
 
-    #crypto-dashboard {
-      background: linear-gradient(145deg, #121212 0%, #1a1a1a 100%);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 28px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    }
-    .dash-grid {
+    /* ===== LIVE DASHBOARD (improved) ===== */
+    .live-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 18px;
     }
-    @media (max-width: 640px) {
-      .dash-grid { grid-template-columns: 1fr; }
+    @media (max-width: 700px) {
+      .live-grid { grid-template-columns: 1fr; }
     }
-    .dash-label {
-      font-size: 0.75rem;
+
+    .live-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 24px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .live-card:hover { border-color: rgba(255,255,255,0.12); }
+
+    .live-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
+      opacity: 0.7;
+    }
+
+    .live-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .live-label {
+      font-size: 0.72rem;
+      font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 8px;
     }
-    .dash-value {
-      font-size: 2.4rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    .dash-meta { font-size: 0.95rem; margin-top: 6px; }
-    .dash-footer {
-      margin-top: 24px;
-      font-size: 0.8rem;
+    .live-source {
+      font-size: 0.7rem;
       color: #555;
-      text-align: center;
+      background: #1a1a1a;
+      padding: 3px 8px;
+      border-radius: 6px;
     }
 
-    /* Cards / Education */
+    .live-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .live-meta {
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* F&G visual bar */
+    .fng-bar-wrap {
+      margin-top: 18px;
+      height: 8px;
+      background: #1e1e1e;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .fng-bar {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease, background 0.4s;
+      width: 0%;
+    }
+    .fng-scale {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .live-footer {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: #555;
+    }
+    .live-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Cards */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      margin-top: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 18px;
     }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 28px 24px;
-      transition: border-color 0.2s;
+      padding: 26px 22px;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .card:hover { border-color: rgba(247,147,26,0.3); }
+    .card:hover {
+      border-color: rgba(247,147,26,0.22);
+      background: var(--card-hover);
+    }
     .card-icon {
-      width: 44px; height: 44px;
-      background: rgba(247,147,26,0.12);
-      border-radius: 12px;
+      width: 42px; height: 42px;
+      background: rgba(247,147,26,0.1);
+      border-radius: 11px;
       display: grid; place-items: center;
-      font-size: 1.4rem;
-      margin-bottom: 16px;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
     }
     .card h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    .card p { color: #aaa; font-size: 0.98rem; }
+    .card p { color: #a0a0a0; font-size: 0.95rem; }
 
     /* Steps */
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 18px;
       counter-reset: step;
     }
     .step {
@@ -216,55 +309,62 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 28px 22px 24px;
+      padding: 28px 20px 22px;
     }
     .step::before {
       counter-increment: step;
       content: counter(step);
       position: absolute;
-      top: -14px; left: 22px;
-      width: 32px; height: 32px;
+      top: -13px; left: 20px;
+      width: 28px; height: 28px;
       background: var(--orange);
       color: #111;
       font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       border-radius: 50%;
       display: grid; place-items: center;
     }
-    .step h3 { font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; }
-    .step p { color: #aaa; font-size: 0.95rem; }
+    .step h3 { font-size: 1.1rem; margin-bottom: 6px; margin-top: 6px; }
+    .step p { color: #a0a0a0; font-size: 0.93rem; }
 
-    /* CTA Block */
+    /* CTA */
     .cta-block {
-      background: linear-gradient(135deg, #1a1208 0%, #1f150a 50%, #141414 100%);
-      border: 1px solid rgba(247,147,26,0.25);
-      border-radius: 24px;
-      padding: 48px 36px;
+      background: linear-gradient(145deg, #16120c 0%, #1a140e 40%, #121212 100%);
+      border: 1px solid rgba(247,147,26,0.2);
+      border-radius: 20px;
+      padding: 44px 32px;
       text-align: center;
-      margin: 20px 0;
     }
     .cta-block h2 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .cta-block p {
-      color: #bbb;
-      max-width: 520px;
-      margin: 0 auto 28px;
-      font-size: 1.1rem;
+      color: #b0b0b0;
+      max-width: 480px;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
     }
     .code-pill {
       display: inline-block;
-      background: #222;
-      border: 1px dashed var(--orange);
+      background: #1c1c1c;
+      border: 1px dashed rgba(247,147,26,0.5);
       color: var(--orange);
       font-weight: 700;
-      font-size: 1.3rem;
-      letter-spacing: 0.08em;
-      padding: 10px 22px;
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+      padding: 10px 20px;
       border-radius: 10px;
-      margin: 0 6px 20px;
+      margin-bottom: 22px;
+    }
+    .disclaimer-note {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: #666;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* FAQ */
@@ -272,37 +372,59 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      margin-bottom: 12px;
-      padding: 18px 22px;
+      margin-bottom: 10px;
+      padding: 16px 20px;
     }
     summary {
       font-weight: 600;
       cursor: pointer;
       list-style: none;
       display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.98rem;
     }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: '+'; font-size: 1.3rem; color: var(--muted); }
+    summary::after { content: '+'; font-size: 1.25rem; color: var(--muted); }
     details[open] summary::after { content: '−'; }
     details p {
       margin-top: 12px;
-      color: #aaa;
-      font-size: 0.98rem;
+      color: #a0a0a0;
+      font-size: 0.95rem;
+    }
+
+    /* Trust strip */
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      justify-content: center;
+      padding: 20px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: #0d0d0d;
+      font-size: 0.82rem;
+      color: #777;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
     }
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border);
-      padding: 40px 24px;
+      padding: 40px 24px 48px;
       text-align: center;
       color: #666;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
     footer a { color: #888; }
-
-    /* Utility */
-    .text-center { text-align: center; }
-    .mb-sm { margin-bottom: 8px; }
+    .footer-disclaimer {
+      max-width: 640px;
+      margin: 16px auto 0;
+      font-size: 0.78rem;
+      color: #555;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -311,86 +433,114 @@
       <div class="logo-icon">B</div>
       <span>Bitcoin Mining Hub</span>
     </div>
-    <a class="nav-cta" href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener">Start Mining →</a>
+    <a class="nav-cta" href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener">Start with code awW0t</a>
   </header>
 
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
+      <div class="hero-badge">Educational · Referral overview</div>
       <h1>Unlock <span>Bitcoin Mining</span><br>Without Hardware</h1>
-      <p>Earn real Bitcoin through digital miners powered by industrial hashrate. No ASICs, no electricity bills, no maintenance — just rewards.</p>
+      <p>Digital miners give you exposure to real industrial hashrate without buying ASICs, paying electricity, or managing hardware. This page explains how it works and links to GoMining via referral code <strong>awW0t</strong>.</p>
       <div class="hero-buttons">
         <a class="btn-primary" href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener">
-          Claim Bonus with Code awW0t
+          Open GoMining with code awW0t
         </a>
-        <a class="btn-secondary" href="#how-it-works">How it works</a>
+        <a class="btn-secondary" href="#how-it-works">See how it works</a>
       </div>
     </div>
   </section>
 
+  <!-- Trust strip -->
+  <div class="trust-strip">
+    <div class="trust-item">📊 Live market data from public APIs</div>
+    <div class="trust-item">🔗 Direct referral link (no intermediate redirects)</div>
+    <div class="trust-item">⚠️ Not financial advice · Crypto involves risk</div>
+  </div>
+
   <!-- Live Market Pulse -->
   <section class="section" id="live">
     <h2 class="section-title">Live Market Pulse</h2>
-    <p class="section-sub">Real-time Bitcoin price and Crypto Fear & Greed Index</p>
+    <p class="section-sub">Public data refreshed automatically. Useful context while learning about mining economics.</p>
 
-    <div id="crypto-dashboard">
-      <div class="dash-grid">
-        <div>
-          <div class="dash-label">Bitcoin Price (USD)</div>
-          <div class="dash-value" id="btc-price" style="color: var(--orange);">Loading…</div>
-          <div class="dash-meta" id="btc-change"></div>
+    <div class="live-grid">
+      <!-- BTC Price Card -->
+      <div class="live-card">
+        <div class="live-card-header">
+          <span class="live-label">Bitcoin Price</span>
+          <span class="live-source">CoinGecko</span>
         </div>
-        <div style="text-align: right;">
-          <div class="dash-label">Fear & Greed Index</div>
-          <div class="dash-value" id="fng-value">—</div>
-          <div class="dash-meta" id="fng-label"></div>
+        <div class="live-value" id="btc-price" style="color: var(--orange);">—</div>
+        <div class="live-meta" id="btc-change">Loading price…</div>
+      </div>
+
+      <!-- Fear & Greed Card -->
+      <div class="live-card">
+        <div class="live-card-header">
+          <span class="live-label">Fear & Greed Index</span>
+          <span class="live-source">alternative.me</span>
+        </div>
+        <div class="live-value" id="fng-value">—</div>
+        <div class="live-meta" id="fng-label">Loading sentiment…</div>
+
+        <div class="fng-bar-wrap">
+          <div class="fng-bar" id="fng-bar"></div>
+        </div>
+        <div class="fng-scale">
+          <span>Extreme Fear</span>
+          <span>Neutral</span>
+          <span>Extreme Greed</span>
         </div>
       </div>
-      <div class="dash-footer">Updates every 60 seconds · Sources: CoinGecko + alternative.me</div>
+    </div>
+
+    <div class="live-footer">
+      <span><span class="live-dot"></span>Auto-refreshes every 60 seconds</span>
+      <span id="last-updated">Last updated: —</span>
     </div>
   </section>
 
   <!-- Education -->
   <section class="section">
     <h2 class="section-title">What is Digital Bitcoin Mining?</h2>
-    <p class="section-sub">Traditional mining needs expensive hardware, cheap power, and constant upkeep. Digital mining removes those barriers.</p>
+    <p class="section-sub">A short, plain-language overview of the model.</p>
 
     <div class="cards">
       <div class="card">
         <div class="card-icon">⚡</div>
-        <h3>Real Hashrate</h3>
-        <p>Your digital miner represents actual computing power running on professional ASICs in optimized data centers. You earn a share of the Bitcoin rewards.</p>
+        <h3>Real hashrate share</h3>
+        <p>Digital miners typically represent a claim on actual computing power running on professional ASICs. You receive a portion of the Bitcoin rewards generated by that hashrate.</p>
       </div>
       <div class="card">
         <div class="card-icon">🖥️</div>
-        <h3>Zero Hardware Risk</h3>
-        <p>No buying, shipping, or maintaining machines. No electricity bills or cooling costs. The platform handles operations; you receive the rewards.</p>
+        <h3>No personal hardware</h3>
+        <p>You do not buy, host, or maintain machines. Electricity, cooling, and operations are handled by the platform. Your main costs are the miner purchase and ongoing maintenance fees.</p>
       </div>
       <div class="card">
         <div class="card-icon">🔄</div>
-        <h3>Flexible & Liquid</h3>
-        <p>Upgrade power or efficiency anytime. Sell or trade digital miners on the secondary market when you want to exit or rebalance.</p>
+        <h3>Upgradeable & transferable</h3>
+        <p>Many platforms let you increase power or efficiency later and offer a secondary market so you can sell or trade your digital miner if your plans change.</p>
       </div>
     </div>
   </section>
 
   <!-- How it works -->
   <section class="section" id="how-it-works">
-    <h2 class="section-title">How GoMining Works</h2>
-    <p class="section-sub">Three simple steps to start earning Bitcoin</p>
+    <h2 class="section-title">How GoMining works (simplified)</h2>
+    <p class="section-sub">Three common steps. Always verify current terms on the official site.</p>
 
     <div class="steps">
       <div class="step">
-        <h3>Sign up with code</h3>
-        <p>Create your account using referral code <strong>awW0t</strong>. New users typically receive extra mining power on the first miner + a free VIP month.</p>
+        <h3>Create an account</h3>
+        <p>Sign up and enter referral code <strong>awW0t</strong> (or use the direct link). New users often receive promotional bonuses such as extra power or a short VIP period — check the latest offer on GoMining.</p>
       </div>
       <div class="step">
         <h3>Choose a digital miner</h3>
-        <p>Pick a miner that fits your budget. Start small and scale later. Each miner has a hashrate (TH/s) that determines your share of rewards.</p>
+        <p>Select a miner sized to your budget. Hashrate (usually measured in TH/s) determines your share of rewards. You can start small and upgrade later.</p>
       </div>
       <div class="step">
-        <h3>Receive Bitcoin rewards</h3>
-        <p>Rewards accumulate automatically based on network difficulty and your hashrate. Reinvest, upgrade, or withdraw as you prefer.</p>
+        <h3>Receive mining rewards</h3>
+        <p>Rewards are calculated from network performance and your hashrate, minus platform fees. You can typically reinvest, upgrade, or withdraw according to the platform’s rules.</p>
       </div>
     </div>
   </section>
@@ -398,51 +548,55 @@
   <!-- Big CTA -->
   <section class="section">
     <div class="cta-block">
-      <h2>Start Mining Bitcoin Today</h2>
-      <p>Use the referral code below for bonus power on your first miner and a free Platinum+ VIP month (terms apply).</p>
+      <h2>Ready to explore GoMining?</h2>
+      <p>Use the referral code below. Any bonuses (extra power, VIP, etc.) are set by GoMining and can change — always confirm on their site.</p>
       <div class="code-pill">awW0t</div>
       <br />
-      <a class="btn-primary" href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener" style="font-size:1.1rem; padding:18px 36px;">
-        Open GoMining & Claim Bonus →
+      <a class="btn-primary" href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener" style="font-size:1.05rem; padding:15px 30px;">
+        Continue to GoMining →
       </a>
-      <p style="margin-top:20px; font-size:0.9rem; color:#777;">Already registered? Enter code <strong>awW0t</strong> in the referral field.</p>
+      <p class="disclaimer-note">This is a promotional / educational page. It is not financial, investment, or tax advice. Cryptocurrency and mining products carry significant risk, including loss of capital.</p>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="section">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <p class="section-sub">Quick answers before you start</p>
+    <h2 class="section-title">Common questions</h2>
+    <p class="section-sub">Straightforward answers. For the latest official details, visit GoMining directly.</p>
 
     <details>
-      <summary>Is this real Bitcoin mining?</summary>
-      <p>Yes. Digital miners are backed by real hashrate on physical ASICs operated by the platform. You receive a proportional share of the Bitcoin mined.</p>
+      <summary>Is this “real” Bitcoin mining?</summary>
+      <p>Digital miners on platforms like GoMining are designed to give you economic exposure to actual hashrate running on physical mining hardware. You do not control the machines yourself; the platform operates them and distributes rewards according to their terms.</p>
     </details>
     <details>
-      <summary>Do I need technical knowledge or hardware?</summary>
-      <p>No. Everything is handled in the app/web interface. There is no equipment to buy, install, or maintain.</p>
+      <summary>Do I need technical skills or my own hardware?</summary>
+      <p>No. The interface is web/app based. There is no equipment to purchase, install, or maintain on your side.</p>
     </details>
     <details>
-      <summary>What do I actually receive?</summary>
-      <p>Bitcoin mining rewards (paid according to the platform’s schedule). You can usually reinvest into more power, upgrade efficiency, or withdraw.</p>
+      <summary>What do I receive?</summary>
+      <p>Mining rewards denominated in Bitcoin (or sometimes convertible tokens), subject to network conditions, difficulty, and platform fees. Exact payout mechanics are defined by GoMining.</p>
     </details>
     <details>
       <summary>What are the main risks?</summary>
-      <p>Bitcoin price volatility, changes in network difficulty, and platform/maintenance fees. Digital mining is still exposed to crypto market risk.</p>
+      <p>Bitcoin price volatility, rising network difficulty, platform/maintenance fees, liquidity of any secondary market, and general counterparty / platform risk. You can lose money. Only use capital you can afford to risk.</p>
     </details>
     <details>
-      <summary>How does the referral bonus work?</summary>
-      <p>New users who sign up with code <strong>awW0t</strong> typically receive extra mining power on their first purchase and a free VIP subscription period. The referrer also earns ongoing rewards from the friend’s activity.</p>
+      <summary>How does the referral code work?</summary>
+      <p>Code <strong>awW0t</strong> links new accounts to this referrer. GoMining may offer bonuses to new users (extra power, VIP time, etc.) and ongoing rewards to the referrer. Offers change — check the official referral page for current terms.</p>
     </details>
   </section>
 
   <footer>
-    <p>Bitcoin Mining Hub · Promotional site for GoMining referral <strong>awW0t</strong></p>
-    <p style="margin-top:8px;">
-      <a href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener">GoMining</a> ·
-      Not affiliated with or endorsed by GoMining beyond the public referral program.
+    <p><strong>Bitcoin Mining Hub</strong> · Independent promotional page for GoMining referral code <strong>awW0t</strong></p>
+    <p style="margin-top:6px;">
+      <a href="https://gomining.com/?ref=awW0t" target="_blank" rel="noopener">GoMining official site</a>
     </p>
-    <p style="margin-top:12px; font-size:0.8rem;">Data sources: CoinGecko (price) · alternative.me (Fear & Greed Index)</p>
+    <p class="footer-disclaimer">
+      This website is not affiliated with, endorsed by, or operated by GoMining beyond participation in their public referral program.
+      All product details, bonuses, fees, and risks are governed solely by GoMining’s terms.
+      Market data is pulled from public third-party APIs (CoinGecko and alternative.me) and may be delayed or inaccurate.
+      Nothing here constitutes financial, investment, or tax advice. Cryptocurrency involves substantial risk of loss.
+    </p>
   </footer>
 
   <script>
@@ -451,6 +605,13 @@
       const changeEl = document.getElementById('btc-change');
       const fngVal = document.getElementById('fng-value');
       const fngLab = document.getElementById('fng-label');
+      const fngBar = document.getElementById('fng-bar');
+      const updatedEl = document.getElementById('last-updated');
+
+      function formatTime() {
+        const now = new Date();
+        return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      }
 
       async function update() {
         try {
@@ -459,8 +620,11 @@
           const btc = await btcRes.json();
           const price = btc.bitcoin.usd;
           const change = btc.bitcoin.usd_24h_change;
+
           priceEl.textContent = '$' + price.toLocaleString('en-US', { maximumFractionDigits: 0 });
-          changeEl.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '% (24h)';
+
+          const changeText = (change >= 0 ? '+' : '') + change.toFixed(2) + '% (24h)';
+          changeEl.innerHTML = changeText;
           changeEl.style.color = change >= 0 ? 'var(--green)' : 'var(--red)';
 
           // Fear & Greed
@@ -468,20 +632,29 @@
           const fng = await fngRes.json();
           const val = parseInt(fng.data[0].value, 10);
           const label = fng.data[0].value_classification;
+
           fngVal.textContent = val;
           fngLab.textContent = label;
 
+          // Color + bar
           let color = 'var(--orange)';
           if (val <= 25) color = 'var(--red)';
-          else if (val <= 45) color = '#ff9800';
-          else if (val <= 55) color = '#ffeb3b';
-          else if (val <= 75) color = '#8bc34a';
+          else if (val <= 45) color = '#f97316';
+          else if (val <= 55) color = 'var(--yellow)';
+          else if (val <= 75) color = '#84cc16';
           else color = 'var(--green)';
+
           fngVal.style.color = color;
           fngLab.style.color = color;
+          fngBar.style.width = val + '%';
+          fngBar.style.background = color;
+
+          updatedEl.textContent = 'Last updated: ' + formatTime();
         } catch (e) {
           priceEl.textContent = '—';
+          changeEl.textContent = 'Unable to load';
           fngVal.textContent = '—';
+          fngLab.textContent = 'Unable to load';
         }
       }
 
