@@ -3,12 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bitcoin Mining Hub | Mine BTC Without Hardware – GoMining</title>
-  <meta name="description" content="Educational overview of digital Bitcoin mining with GoMining. Live BTC price, Fear & Greed, network hashrate & difficulty. Real facility video. Referral code awW0t." />
+
+  <!-- Primary SEO -->
+  <title>Bitcoin Mining Without Hardware | GoMining Digital Miners Guide + Live Stats</title>
+  <meta name="description" content="Learn how digital Bitcoin mining works with GoMining. Live BTC price, Fear & Greed Index, network hashrate & difficulty. Real facility video, customer reviews, and referral code awW0t." />
+  <meta name="keywords" content="Bitcoin mining without hardware, digital miners, GoMining, cloud mining alternative, Bitcoin hashrate, live Bitcoin price, mining difficulty, GoMining review, referral code awW0t" />
+  <meta name="author" content="Bitcoin Mining Hub" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://merry-duckanoo-0896f8.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://merry-duckanoo-0896f8.netlify.app/" />
+  <meta property="og:title" content="Bitcoin Mining Without Hardware | GoMining Digital Miners" />
+  <meta property="og:description" content="Educational guide to digital Bitcoin mining. Live market & mining stats, real facility tour, and how GoMining works. Use referral code awW0t." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:site_name" content="Bitcoin Mining Hub" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bitcoin Mining Without Hardware | GoMining Guide" />
+  <meta name="twitter:description" content="Live BTC price, network hashrate, Fear & Greed + how digital mining works. Referral code awW0t." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" />
+
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data: WebSite + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Bitcoin Mining Hub",
+    "url": "https://merry-duckanoo-0896f8.netlify.app/",
+    "description": "Educational overview of digital Bitcoin mining with GoMining. Live market data, mining stats, facility video and referral information.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://merry-duckanoo-0896f8.netlify.app/#live",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this real Bitcoin mining?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Digital miners on platforms like GoMining are designed to give you economic exposure to actual hashrate running on physical mining hardware. You do not control the machines yourself; the platform operates them and distributes rewards according to their terms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need technical skills or my own hardware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The interface is web and app based. There is no equipment to purchase, install, or maintain on your side."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main risks of digital Bitcoin mining?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bitcoin price volatility, rising network difficulty, platform and maintenance fees, liquidity of any secondary market, and general counterparty or platform risk. You can lose money. Only use capital you can afford to risk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the GoMining referral code awW0t work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Code awW0t links new accounts to this referrer. GoMining may offer bonuses to new users such as extra power or VIP time, and ongoing rewards to the referrer. Offers change — always check the official referral page for current terms."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #080808;
@@ -164,7 +242,6 @@
       font-size: 1.05rem;
     }
 
-    /* Live dashboard – 4 cards */
     .live-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -379,6 +456,52 @@
       text-align: center;
     }
 
+    /* News section */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .news-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      transition: border-color 0.2s;
+    }
+    .news-item:hover {
+      border-color: rgba(247,147,26,0.3);
+    }
+    .news-date {
+      font-size: 0.75rem;
+      color: #666;
+      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+    }
+    .news-item h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    .news-item h3 a {
+      color: #e8e8e8;
+      text-decoration: none;
+    }
+    .news-item h3 a:hover {
+      color: var(--orange);
+    }
+    .news-item p {
+      font-size: 0.9rem;
+      color: #999;
+      margin: 0;
+    }
+    .news-source {
+      font-size: 0.78rem;
+      color: #666;
+      margin-top: 8px;
+    }
+
     .cta-block {
       background: linear-gradient(145deg, #16120c 0%, #1a140e 40%, #111 100%);
       border: 1px solid rgba(247,147,26,0.22);
@@ -505,13 +628,11 @@
     <div class="trust-item">⚠️ Not financial advice · Crypto involves risk</div>
   </div>
 
-  <!-- Live Market + Mining Pulse -->
   <section class="section" id="live">
     <h2 class="section-title">Live Market & Mining Pulse</h2>
     <p class="section-sub">Public data refreshed automatically — price, sentiment, and network mining metrics.</p>
 
     <div class="live-grid">
-      <!-- BTC Price -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Bitcoin Price</span>
@@ -521,7 +642,6 @@
         <div class="live-meta" id="btc-change">Loading…</div>
       </div>
 
-      <!-- Fear & Greed -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Fear & Greed</span>
@@ -539,7 +659,6 @@
         </div>
       </div>
 
-      <!-- Network Hashrate -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Network Hashrate</span>
@@ -549,7 +668,6 @@
         <div class="live-meta" id="hashrate-meta">Loading…</div>
       </div>
 
-      <!-- Difficulty Adjustment -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Difficulty Adj.</span>
@@ -566,7 +684,6 @@
     </div>
   </section>
 
-  <!-- Education -->
   <section class="section">
     <h2 class="section-title">What is Digital Bitcoin Mining?</h2>
     <p class="section-sub">A short, plain-language overview of the model.</p>
@@ -590,7 +707,6 @@
     </div>
   </section>
 
-  <!-- How it works -->
   <section class="section" id="how-it-works">
     <h2 class="section-title">How GoMining works (simplified)</h2>
     <p class="section-sub">Three common steps. Always verify current terms on the official site.</p>
@@ -611,7 +727,6 @@
     </div>
   </section>
 
-  <!-- Customer Reviews -->
   <section class="section" id="reviews">
     <h2 class="section-title">What users say</h2>
     <p class="section-sub">Public feedback from Trustpilot and community sources. Experiences vary with market conditions.</p>
@@ -636,7 +751,6 @@
     <p class="reviews-note">Reviews are paraphrased from public Trustpilot posts for clarity. Individual results depend on hashrate, fees, BTC price, and network difficulty. Always do your own research.</p>
   </section>
 
-  <!-- Real Facility Video -->
   <section class="section" id="facility">
     <h2 class="section-title">See the real mining facilities</h2>
     <p class="section-sub">Independent tour of a GoMining Texas data center by VoskCoin — real ASICs, real infrastructure, real scale.</p>
@@ -657,7 +771,42 @@
     </p>
   </section>
 
-  <!-- Big CTA -->
+  <!-- News / Blog style section -->
+  <section class="section" id="news">
+    <h2 class="section-title">GoMining & Mining News</h2>
+    <p class="section-sub">Recent developments related to GoMining and the broader Bitcoin mining industry.</p>
+
+    <div class="news-list">
+      <article class="news-item">
+        <div class="news-date">June 2026</div>
+        <h3><a href="https://www.ccn.com/news/crypto/gomining-stratum-v2-first-miner-controlled-bitcoin-block/" target="_blank" rel="noopener">GoMining mines first Bitcoin block with miner-controlled transactions (Stratum V2)</a></h3>
+        <p>GoMining and DMND reported mining a production block where the miner selected transactions using Stratum V2 Job Declaration — a notable step toward greater miner control over block templates.</p>
+        <div class="news-source">Source: CCN</div>
+      </article>
+
+      <article class="news-item">
+        <div class="news-date">July 2026</div>
+        <h3><a href="https://u.today/gomining" target="_blank" rel="noopener">GoMining integrates Uphold infrastructure to expand Bitcoin services</a></h3>
+        <p>Partnership aims to broaden payment and compliance capabilities while keeping the core mining and digital miner experience for existing users.</p>
+        <div class="news-source">Source: U.Today / GoMining</div>
+      </article>
+
+      <article class="news-item">
+        <div class="news-date">June 2026</div>
+        <h3><a href="https://www.bitget.com/news/detail/12560605468598" target="_blank" rel="noopener">GoMining launches GoBTC Pay — Bitcoin commerce tool with 0.2% merchant fee</a></h3>
+        <p>New SDK and API let merchants accept Bitcoin settlements on-chain with a low processing fee and prioritization via GoMining’s infrastructure.</p>
+        <div class="news-source">Source: Bitget News / GoMining</div>
+      </article>
+
+      <article class="news-item">
+        <div class="news-date">August 2026</div>
+        <h3><a href="https://cointelegraph.com/news/bitcoin-miners-hashrate-ai-data-centers-hpc" target="_blank" rel="noopener">Bitcoin miners continue shifting capacity toward AI and HPC</a></h3>
+        <p>Industry report notes public miners reducing pure mining hashrate while expanding high-performance computing and data-center deals — an ongoing structural trend in the sector.</p>
+        <div class="news-source">Source: Cointelegraph</div>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <div class="cta-block">
       <h2>Ready to explore GoMining?</h2>
@@ -671,8 +820,7 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section">
+  <section class="section" id="faq">
     <h2 class="section-title">Common questions</h2>
     <p class="section-sub">Straightforward answers. For the latest official details, visit GoMining directly.</p>
 
@@ -728,17 +876,15 @@
         return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
       }
 
-      function formatHashrate(ths) {
-        // mempool returns currentHashrate in H/s
-        const eh = ths / 1e18;
+      function formatHashrate(hs) {
+        const eh = hs / 1e18;
         if (eh >= 1) return eh.toFixed(2) + ' EH/s';
-        const ph = ths / 1e15;
+        const ph = hs / 1e15;
         return ph.toFixed(1) + ' PH/s';
       }
 
       async function update() {
         try {
-          // Parallel fetches
           const [btcRes, fngRes, hashRes, diffRes] = await Promise.all([
             fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true'),
             fetch('https://api.alternative.me/fng/?limit=1'),
@@ -746,7 +892,6 @@
             fetch('https://mempool.space/api/v1/difficulty-adjustment')
           ]);
 
-          // BTC
           const btc = await btcRes.json();
           const price = btc.bitcoin.usd;
           const change = btc.bitcoin.usd_24h_change;
@@ -754,7 +899,6 @@
           changeEl.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '% (24h)';
           changeEl.style.color = change >= 0 ? 'var(--green)' : 'var(--red)';
 
-          // Fear & Greed
           const fng = await fngRes.json();
           const val = parseInt(fng.data[0].value, 10);
           const label = fng.data[0].value_classification;
@@ -771,14 +915,10 @@
           fngBar.style.width = val + '%';
           fngBar.style.background = color;
 
-          // Network hashrate
           const hashData = await hashRes.json();
-          // currentHashrate is in H/s
-          const current = hashData.currentHashrate;
-          hashrateEl.textContent = formatHashrate(current);
+          hashrateEl.textContent = formatHashrate(hashData.currentHashrate);
           hashrateMeta.textContent = '3-day avg network';
 
-          // Difficulty adjustment
           const diff = await diffRes.json();
           const pct = diff.difficultyChange;
           const blocks = diff.remainingBlocks;
@@ -790,7 +930,6 @@
           updatedEl.textContent = 'Last updated: ' + formatTime();
         } catch (e) {
           console.warn('Live data error', e);
-          // Leave existing values or show fallback
           if (priceEl.textContent === '—') {
             changeEl.textContent = 'Unable to load';
             fngLab.textContent = 'Unable to load';
