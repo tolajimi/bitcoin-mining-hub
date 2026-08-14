@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitcoin Mining Hub | Mine BTC Without Hardware – GoMining</title>
-  <meta name="description" content="Educational overview of digital Bitcoin mining with GoMining. Live BTC price & Fear & Greed Index. Real facility video + customer experiences. Referral code awW0t." />
+  <meta name="description" content="Educational overview of digital Bitcoin mining with GoMining. Live BTC price, Fear & Greed, network hashrate & difficulty. Real facility video. Referral code awW0t." />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -164,19 +164,23 @@
       font-size: 1.05rem;
     }
 
+    /* Live dashboard – 4 cards */
     .live-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
-    @media (max-width: 700px) {
+    @media (min-width: 900px) {
+      .live-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 600px) {
       .live-grid { grid-template-columns: 1fr; }
     }
     .live-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 26px 24px 22px;
+      padding: 22px 20px 20px;
       position: relative;
       overflow: hidden;
     }
@@ -192,33 +196,35 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
+      gap: 8px;
     }
     .live-label {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
     }
     .live-source {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: #555;
       background: #1a1a1a;
-      padding: 3px 8px;
-      border-radius: 6px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      white-space: nowrap;
     }
     .live-value {
-      font-size: 2.5rem;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.1;
+      line-height: 1.15;
       margin-bottom: 6px;
     }
-    .live-meta { font-size: 0.95rem; font-weight: 500; }
+    .live-meta { font-size: 0.88rem; font-weight: 500; color: #aaa; }
     .fng-bar-wrap {
-      margin-top: 18px;
-      height: 8px;
+      margin-top: 14px;
+      height: 7px;
       background: #1e1e1e;
       border-radius: 4px;
       overflow: hidden;
@@ -232,9 +238,9 @@
     .fng-scale {
       display: flex;
       justify-content: space-between;
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       color: #555;
-      margin-top: 6px;
+      margin-top: 5px;
     }
     .live-footer {
       margin-top: 20px;
@@ -338,7 +344,6 @@
     .step h3 { font-size: 1.1rem; margin-bottom: 6px; margin-top: 6px; }
     .step p { color: #a0a0a0; font-size: 0.93rem; }
 
-    /* Reviews */
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -495,41 +500,63 @@
   </section>
 
   <div class="trust-strip">
-    <div class="trust-item">📊 Live market data from public APIs</div>
+    <div class="trust-item">📊 Live market + mining data</div>
     <div class="trust-item">🏭 Real facility video below</div>
     <div class="trust-item">⚠️ Not financial advice · Crypto involves risk</div>
   </div>
 
-  <!-- Live Market Pulse -->
+  <!-- Live Market + Mining Pulse -->
   <section class="section" id="live">
-    <h2 class="section-title">Live Market Pulse</h2>
-    <p class="section-sub">Public data refreshed automatically. Useful context while learning about mining economics.</p>
+    <h2 class="section-title">Live Market & Mining Pulse</h2>
+    <p class="section-sub">Public data refreshed automatically — price, sentiment, and network mining metrics.</p>
 
     <div class="live-grid">
+      <!-- BTC Price -->
       <div class="live-card">
         <div class="live-card-header">
           <span class="live-label">Bitcoin Price</span>
           <span class="live-source">CoinGecko</span>
         </div>
         <div class="live-value" id="btc-price" style="color: var(--orange);">—</div>
-        <div class="live-meta" id="btc-change">Loading price…</div>
+        <div class="live-meta" id="btc-change">Loading…</div>
       </div>
 
+      <!-- Fear & Greed -->
       <div class="live-card">
         <div class="live-card-header">
-          <span class="live-label">Fear & Greed Index</span>
+          <span class="live-label">Fear & Greed</span>
           <span class="live-source">alternative.me</span>
         </div>
         <div class="live-value" id="fng-value">—</div>
-        <div class="live-meta" id="fng-label">Loading sentiment…</div>
+        <div class="live-meta" id="fng-label">Loading…</div>
         <div class="fng-bar-wrap">
           <div class="fng-bar" id="fng-bar"></div>
         </div>
         <div class="fng-scale">
-          <span>Extreme Fear</span>
+          <span>Fear</span>
           <span>Neutral</span>
-          <span>Extreme Greed</span>
+          <span>Greed</span>
         </div>
+      </div>
+
+      <!-- Network Hashrate -->
+      <div class="live-card">
+        <div class="live-card-header">
+          <span class="live-label">Network Hashrate</span>
+          <span class="live-source">mempool.space</span>
+        </div>
+        <div class="live-value" id="hashrate">—</div>
+        <div class="live-meta" id="hashrate-meta">Loading…</div>
+      </div>
+
+      <!-- Difficulty Adjustment -->
+      <div class="live-card">
+        <div class="live-card-header">
+          <span class="live-label">Difficulty Adj.</span>
+          <span class="live-source">mempool.space</span>
+        </div>
+        <div class="live-value" id="diff-change">—</div>
+        <div class="live-meta" id="diff-meta">Loading…</div>
       </div>
     </div>
 
@@ -609,7 +636,7 @@
     <p class="reviews-note">Reviews are paraphrased from public Trustpilot posts for clarity. Individual results depend on hashrate, fees, BTC price, and network difficulty. Always do your own research.</p>
   </section>
 
-  <!-- Real Facility Video (moved below education) -->
+  <!-- Real Facility Video -->
   <section class="section" id="facility">
     <h2 class="section-title">See the real mining facilities</h2>
     <p class="section-sub">Independent tour of a GoMining Texas data center by VoskCoin — real ASICs, real infrastructure, real scale.</p>
@@ -679,7 +706,7 @@
     <p class="footer-disclaimer">
       This website is not affiliated with, endorsed by, or operated by GoMining beyond participation in their public referral program.
       All product details, bonuses, fees, and risks are governed solely by GoMining’s terms.
-      Market data is pulled from public third-party APIs (CoinGecko and alternative.me) and may be delayed or inaccurate.
+      Market data is pulled from public third-party APIs (CoinGecko, alternative.me, mempool.space) and may be delayed or inaccurate.
       Nothing here constitutes financial, investment, or tax advice. Cryptocurrency involves substantial risk of loss.
     </p>
   </footer>
@@ -691,50 +718,85 @@
       const fngVal = document.getElementById('fng-value');
       const fngLab = document.getElementById('fng-label');
       const fngBar = document.getElementById('fng-bar');
+      const hashrateEl = document.getElementById('hashrate');
+      const hashrateMeta = document.getElementById('hashrate-meta');
+      const diffChangeEl = document.getElementById('diff-change');
+      const diffMeta = document.getElementById('diff-meta');
       const updatedEl = document.getElementById('last-updated');
 
       function formatTime() {
-        const now = new Date();
-        return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      }
+
+      function formatHashrate(ths) {
+        // mempool returns currentHashrate in H/s
+        const eh = ths / 1e18;
+        if (eh >= 1) return eh.toFixed(2) + ' EH/s';
+        const ph = ths / 1e15;
+        return ph.toFixed(1) + ' PH/s';
       }
 
       async function update() {
         try {
-          const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
+          // Parallel fetches
+          const [btcRes, fngRes, hashRes, diffRes] = await Promise.all([
+            fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true'),
+            fetch('https://api.alternative.me/fng/?limit=1'),
+            fetch('https://mempool.space/api/v1/mining/hashrate/3d'),
+            fetch('https://mempool.space/api/v1/difficulty-adjustment')
+          ]);
+
+          // BTC
           const btc = await btcRes.json();
           const price = btc.bitcoin.usd;
           const change = btc.bitcoin.usd_24h_change;
-
           priceEl.textContent = '$' + price.toLocaleString('en-US', { maximumFractionDigits: 0 });
           changeEl.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '% (24h)';
           changeEl.style.color = change >= 0 ? 'var(--green)' : 'var(--red)';
 
-          const fngRes = await fetch('https://api.alternative.me/fng/?limit=1');
+          // Fear & Greed
           const fng = await fngRes.json();
           const val = parseInt(fng.data[0].value, 10);
           const label = fng.data[0].value_classification;
-
           fngVal.textContent = val;
           fngLab.textContent = label;
-
           let color = 'var(--orange)';
           if (val <= 25) color = 'var(--red)';
           else if (val <= 45) color = '#f97316';
           else if (val <= 55) color = 'var(--yellow)';
           else if (val <= 75) color = '#84cc16';
           else color = 'var(--green)';
-
           fngVal.style.color = color;
           fngLab.style.color = color;
           fngBar.style.width = val + '%';
           fngBar.style.background = color;
 
+          // Network hashrate
+          const hashData = await hashRes.json();
+          // currentHashrate is in H/s
+          const current = hashData.currentHashrate;
+          hashrateEl.textContent = formatHashrate(current);
+          hashrateMeta.textContent = '3-day avg network';
+
+          // Difficulty adjustment
+          const diff = await diffRes.json();
+          const pct = diff.difficultyChange;
+          const blocks = diff.remainingBlocks;
+          const days = diff.remainingTime ? (diff.remainingTime / 86400).toFixed(1) : '—';
+          diffChangeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+          diffChangeEl.style.color = pct >= 0 ? 'var(--green)' : 'var(--red)';
+          diffMeta.textContent = '~' + days + 'd · ' + blocks + ' blocks left';
+
           updatedEl.textContent = 'Last updated: ' + formatTime();
         } catch (e) {
-          priceEl.textContent = '—';
-          changeEl.textContent = 'Unable to load';
-          fngVal.textContent = '—';
-          fngLab.textContent = 'Unable to load';
+          console.warn('Live data error', e);
+          // Leave existing values or show fallback
+          if (priceEl.textContent === '—') {
+            changeEl.textContent = 'Unable to load';
+            fngLab.textContent = 'Unable to load';
+            hashrateMeta.textContent = 'Unable to load';
+            diffMeta.textContent = 'Unable to load';
+          }
         }
       }
 
